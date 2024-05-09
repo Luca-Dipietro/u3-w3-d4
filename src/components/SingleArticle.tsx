@@ -1,6 +1,6 @@
 import { Card, Col } from "react-bootstrap";
-import IArticle from "../interface/IArticle";
 import { Link } from "react-router-dom";
+import IArticle from "../interface/IArticle";
 
 interface SingleArticleProps {
   article: IArticle;
@@ -8,19 +8,21 @@ interface SingleArticleProps {
 
 const SingleArticle = (props: SingleArticleProps) => {
   return (
-    <Col xs={12} md={4} className="text-center">
-      <Link to={`/ArticleDetails/${props.article.id}`}>
-        <Card>
-          <Card.Img variant="top" src={props.article.image_url} />
-          <Card.Body>
-            <Card.Title>{props.article.title}</Card.Title>
-            <Card.Text>{props.article.summary}</Card.Text>
-            {/* <Card.Text>{props.article.published_at}</Card.Text>
-          <Card.Text>{props.article.updated_at}</Card.Text> */}
-          </Card.Body>
-        </Card>
-      </Link>
+    <Col xs={12} md={4} className="text-center mb-4">
+      <Card className="h-100 card-homepage">
+        <Card.Img variant="top" src={props.article.image_url} />
+        <Card.Body>
+          <Card.Title>{props.article.title}</Card.Title>
+          <Card.Text>{props.article.summary}</Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <Link to={`/ArticleDetails/${props.article.id}`} className="btn btn-primary">
+            Dettagli
+          </Link>
+        </Card.Footer>
+      </Card>
     </Col>
   );
 };
+
 export default SingleArticle;

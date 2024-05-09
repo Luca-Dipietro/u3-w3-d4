@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import IArticle from "../interface/IArticle";
 
 const ArticleDetails = () => {
-  const [article, setArticle] = useState<IArticle>();
+  const [article, setArticle] = useState<IArticle | null>(null);
   const { id } = useParams();
 
   const fetchArticles = async () => {
@@ -27,19 +27,19 @@ const ArticleDetails = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Dettagli Articolo</h2>
-      {article && (
-        <Card>
-          <Card.Img variant="top" src={article.image_url} />
-          <Card.Body>
-            <Card.Title>{article.title}</Card.Title>
-            <Card.Text>{article.summary}</Card.Text>
-            {/* <Card.Text>{props.article.published_at}</Card.Text>
-            <Card.Text>{props.article.updated_at}</Card.Text> */}
-          </Card.Body>
-        </Card>
-      )}
+    <div className="card-details">
+      <div className="card-wrapper">
+        <h2 className="text-white text-center mb-4">Dettagli Articolo</h2>
+        {article && (
+          <Card className="custom-card">
+            <Card.Img className="custom-card-img" variant="top" src={article.image_url} />
+            <Card.Body className="custom-card-body">
+              <Card.Title className="card-title">{article.title}</Card.Title>
+              <Card.Text className="card-text">{article.summary}</Card.Text>
+            </Card.Body>
+          </Card>
+        )}
+      </div>
     </div>
   );
 };

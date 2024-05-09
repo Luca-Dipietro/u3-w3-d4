@@ -1,1 +1,89 @@
+.App {
+  background: linear-gradient(135deg, #051937 0%, #004d7a 100%);
+  min-height: 100vh;
+}
 
+.card-homepage {
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 400px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+
+  .card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+  }
+
+  .btn-primary:hover {
+    background-color: #003166;
+    border-color: #003166;
+    border-radius: 25px;
+  }
+}
+
+.card-details {
+  display: flex;
+  justify-content: center;
+
+  .card-wrapper {
+    width: 850px;
+  }
+
+  .card-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .custom-card {
+    border-radius: 10px;
+    border: none;
+  }
+
+  .custom-card-img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .custom-card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+  }
+}

@@ -25,10 +25,12 @@ const HomePage = () => {
   }, []);
 
   return (
-    <Container>
+    <Container fluid>
       <Row className="justify-content-center">
         <Col xs={12} md={6} className="text-center">
-          <h2>Articoli</h2>
+          <h2 className="mb-4" style={{ color: "white" }}>
+            Benvenuti nel Portale delle Notizie Spaziali
+          </h2>
         </Col>
       </Row>
       <Row className="justify-content-center">
